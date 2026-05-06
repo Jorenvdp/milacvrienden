@@ -28,21 +28,17 @@ Tegen: {{ data.team.tegen }}
 ({{ d.goals }}G + {{ d.assists }}A)<br>
 {% endfor %}
 
-<hr>
-
 <h3>🔒 Beheer</h3>
 
-{{ url_for('wedstrijd', seizoen=seizoen) }}
+<a href="{{ url_for('wedstrijd', seizoen=seizoen) }}">
     <button>➕ Wedstrijd toevoegen</button>
 </a>
 
 <br><br>
 
-{{ url_for('wedstrijden_lijst', seizoen=seizoen) }}
+<a href="{{ url_for('wedstrijden_lijst', seizoen=seizoen) }}">
     <button>✏️ Wedstrijden aanpassen</button>
 </a>
-
-<hr>
 
 
 <br>
