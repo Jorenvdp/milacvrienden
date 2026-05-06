@@ -302,7 +302,7 @@
                 "assists": 0
             },
             "Jonas": {
-                "goals": 0,
+                "goals": 1,
                 "assists": 0
             },
             "Mathias": {
@@ -361,12 +361,12 @@
                 "tegen": 0,
                 "doelpunten": [
                     {
-                        "maker": null,
-                        "assist": null
+                        "maker": "Jonas",
+                        "assist": "Geen"
                     },
                     {
-                        "maker": null,
-                        "assist": null
+                        "maker": "Wim",
+                        "assist": "Geen"
                     }
                 ]
             }
