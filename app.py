@@ -87,10 +87,6 @@ def nieuw_seizoen():
 
     return redirect(url_for("index"))
 
-@app.route("/seizoen/<seizoen>")
-def seizoen(seizoen):
-    return render_template("seizoen.html", seizoen=seizoen)
-
 @app.route("/wedstrijd/<seizoen>", methods=["GET", "POST"])
 def wedstrijd(seizoen):
     data = laad_data()
