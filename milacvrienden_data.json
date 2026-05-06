@@ -303,15 +303,15 @@
             },
             "Jonas": {
                 "goals": 1,
-                "assists": 0
+                "assists": 1
             },
             "Mathias": {
-                "goals": 0,
+                "goals": 1,
                 "assists": 0
             },
             "Ruben": {
                 "goals": 0,
-                "assists": 0
+                "assists": 1
             },
             "Tim": {
                 "goals": 0,
@@ -319,7 +319,7 @@
             },
             "Jelle": {
                 "goals": 0,
-                "assists": 1
+                "assists": 0
             },
             "Koen": {
                 "goals": 0,
@@ -347,7 +347,7 @@
             }
         },
         "team": {
-            "goals": 2,
+            "goals": 3,
             "tegen": 0
         },
         "wedstrijden": {
@@ -357,16 +357,20 @@
                 "doelpunten": []
             },
             "Den Bels": {
-                "goals": 2,
+                "goals": 3,
                 "tegen": 0,
                 "doelpunten": [
                     {
-                        "maker": "Jonas",
+                        "maker": "Mathias",
                         "assist": "Koen"
                     },
                     {
+                        "maker": "Jonas",
+                        "assist": "Ruben"
+                    },
+                    {
                         "maker": "Joren",
-                        "assist": "Jelle"
+                        "assist": "Jonas"
                     }
                 ]
             }
