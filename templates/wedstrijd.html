@@ -17,7 +17,7 @@
 >
 <br><br>
     Goals:
-    <select name="goals" id="goals" onchange="maakGoals()">
+    <select name="goals" onchange="this.form.submit()">
         {% for i in range(11) %}
         <option value="{{ i }}">{{ i }}</option>
         {% endfor %}
@@ -30,39 +30,6 @@
         {% endfor %}
     </select>
 
-    <div id="goalvelden"></div>
-
-<br><br>
-<label>Beheerderswachtwoord</label><br>
-<input type="password" name="password" required>
-    <br>
-    <button type="submit">Opslaan</button>
-</form>
-
-<script>
-function maakGoals() {
-    let aantal = document.getElementById("goals").value;
-    let div = document.getElementById("goalvelden");
-    div.innerHTML = "";
-
-    for (let i = 0; i < aantal; i++) {
-        let html = `<p>Goal ${i+1}</p>
-            <select name="maker${i}">
-                <option>Owngoal</option>
-                {% for s in spelers %}
-                <option>{{ s }}</option>
-                {% endfor %}
-            </select>
-            <select name="assist${i}">
-                <option>Geen</option>
-                {% for s in spelers %}
-                <option>{{ s }}</option>
-                {% endfor %}
-            </select>`;
-        div.innerHTML += html;
-    }
-}
-</script>
 
 <br><br>
 
