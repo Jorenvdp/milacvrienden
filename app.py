@@ -152,11 +152,11 @@ def speler_toevoegen():
 def wedstrijd(seizoen):
     data = laad_data()
 
-    # ✅ ALTIJD een waarde hebben (ook bij GET)
+    # ✅ goals ALTIJD bepalen
     goals = int(request.form.get("goals", 0))
 
-    # ✅ Alleen opslaan bij echte submit
-    if request.method == "POST" and "wedstrijdnaam" in request.form:
+    # ✅ ENKEL bij echte submit controleren + opslaan
+    if request.method == "POST" and "submit" in request.form:
 
         if request.form.get("password") != ADMIN_PASSWORD:
             return "Geen toegang", 403
@@ -185,7 +185,7 @@ def wedstrijd(seizoen):
 
         return redirect(url_for("overzicht", seizoen=seizoen))
 
-    # ✅ HIER ZAT DE CRASH: goals moet OOIT meegestuurd worden
+    # ✅ GET of enkel goals gewijzigd → formulier tonen
     return render_template(
         "wedstrijd.html",
         seizoen=seizoen,
