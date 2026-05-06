@@ -357,5 +357,8 @@
                 "doelpunten": []
             }
         }
-    }
+    },
+    "spelers": [
+        "Wim"
+    ]
 }
