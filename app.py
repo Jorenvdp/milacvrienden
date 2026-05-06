@@ -203,6 +203,7 @@ def wedstrijd_bewerken(seizoen, wedstrijdnaam):
     wedstrijdnaam = unquote(wedstrijdnaam)
     data = laad_data()
     wedstrijd = data[seizoen]["wedstrijden"][wedstrijdnaam]
+    goals = wedstrijd["goals"]
 
     if request.method == "POST":
 
