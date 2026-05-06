@@ -200,6 +200,7 @@ def wedstrijd_bewerken(seizoen, wedstrijdnaam):
 
         herbereken_stats(seizoen, data)
         bewaar_data(data)
+        push_json_to_github()
         return redirect(url_for("wedstrijden_lijst", seizoen=seizoen))
 
     # ✅ GET mag NOOIT wachtwoord checken
