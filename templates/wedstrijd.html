@@ -16,20 +16,48 @@
     required
 >
 <br><br>
-    Goals:
-    <select name="goals" onchange="this.form.submit()">
-        {% for i in range(11) %}
+    
+Goals:
+<select name="goals" onchange="this.form.submit()">
+    {% for i in range(11) %}
         <option value="{{ i }}">{{ i }}</option>
+    {% endfor %}
+</select>
+
+Tegen:
+<select name="tegen">
+    {% for i in range(11) %}
+        <option value="{{ i }}">{{ i }}</option>
+    {% endfor %}
+</select>
+{% for i in range(goals) %}
+
+    <p>Goal {{ i + 1 }}</p>
+
+    <select name="maker{{ i }}">
+        <option value="OWONGOAL">Owngoal</option>
+        {% for s in spelers %}
+            <option value="{{ s }}">{{ s }}</option>
         {% endfor %}
     </select>
 
-    Tegen:
-    <select name="tegen">
-        {% for i in range(11) %}
-        <option value="{{ i }}">{{ i }}</option>
+    <select name="assist{{ i }}">
+        <option value="">Geen</option>
+        {% for s in spelers %}
+            <option value="{{ s }}">{{ s }}</option>
         {% endfor %}
     </select>
 
+{% endfor %}
+
+<br><br>
+<label>Beheerderswachtwoord</label><br>
+<input type="password" name="password" required>
+
+<br><br>
+<button type="submit">Opslaan</button>
+
+</form>    
 
 <br><br>
 
