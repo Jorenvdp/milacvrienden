@@ -40,9 +40,11 @@ Tegen: {{ data.team.tegen }}
     <button>✏️ Wedstrijden aanpassen</button>
 </a>
 
-<h3>Speler toevoegen</h3>
+<hr>
 
-<form method="post" action="/speler/toevoegen">
+<h3>👥 Speler toevoegen</h3>
+
+<form action="{{ url_for('speler_toevoegen') }}" method="post">
   <input
     type="text"
     name="naam"
@@ -57,9 +59,9 @@ Tegen: {{ data.team.tegen }}
     required
   >
   <br><br>
-  <button type="submit">Toevoegen</button>
+  <button type="submit">➕ Speler toevoegen</button>
 </form>
-
+    
 <br><br>
     
 <a href="{{ url_for('index') }}">Ga terug naar beginpagina</a>
