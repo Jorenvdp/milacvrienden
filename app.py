@@ -163,6 +163,7 @@ def wedstrijd(seizoen):
 
         herbereken_stats(seizoen, data)
         bewaar_data(data)
+        push_json_to_github()
 
         return redirect(url_for("overzicht", seizoen=seizoen))
 
