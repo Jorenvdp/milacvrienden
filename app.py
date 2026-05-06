@@ -199,7 +199,7 @@ def wedstrijd_bewerken(seizoen, wedstrijdnaam):
 
     if request.method == "POST":
 
-        # ✅ wachtwoordcheck
+        # ✅ Wachtwoordcheck
         if request.form.get("password") != ADMIN_PASSWORD:
             return "Geen toegang", 403
 
@@ -218,30 +218,21 @@ def wedstrijd_bewerken(seizoen, wedstrijdnaam):
                 "assist": assist
             })
 
-        bewaar_data(data)
-        push_json_to_github()
-        return redirect(url_for("overzicht", seizoen=seizoen))
-
-        return render_template(
-        "wedstrijd_bewerk.html",
-        seizoen=seizoen,
-        wedstrijdnaam=wedstrijdnaam,
-        wedstrijd=wedstrijd,
-        spelers=laad_spelers(data)
-    )
-
+        # ✅ Stats herberekenen en data opslaan
         herbereken_stats(seizoen, data)
         bewaar_data(data)
         push_json_to_github()
-        return redirect(url_for("wedstrijden_lijst", seizoen=seizoen))
 
-    # ✅ GET mag NOOIT wachtwoord checken
+        return redirect(url_for("overzicht", seizoen=seizoen))
+
+    # ✅ GET: formulier tonen (geen wachtwoordcheck)
     return render_template(
         "wedstrijd_bewerk.html",
         seizoen=seizoen,
         wedstrijdnaam=wedstrijdnaam,
         wedstrijd=wedstrijd,
         spelers=laad_spelers(data)
+    )
 
 @app.route("/wedstrijden/<seizoen>")
 def wedstrijden_lijst(seizoen):
