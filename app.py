@@ -109,7 +109,7 @@ def kies_seizoen():
 @app.route("/", methods=["GET", "POST"])
 def index():
     data = laad_data()
-    seizoenen = sorted(data.keys())
+    seizoenen = sorted(s for s in data.keys() if s != "spelers")
 
     return render_template(
         "index.html",
