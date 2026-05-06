@@ -238,8 +238,11 @@ def wedstrijd_bewerken(seizoen, wedstrijdnaam):
         seizoen=seizoen,
         wedstrijdnaam=wedstrijdnaam,
         wedstrijd=wedstrijd,
-        spelers=laad_spelers(data)
+        spelers=laad_spelers(data),
+        goals=goals   # ✅ VERPLICHT
     )
+
+    
 
 @app.route("/wedstrijden/<seizoen>")
 def wedstrijden_lijst(seizoen):
