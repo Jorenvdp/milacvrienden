@@ -72,6 +72,9 @@ def bewaar_data(data):
     with open(DATA_FILE, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=4, ensure_ascii=False)
 
+def laad_spelers(data):
+    return data.get("spelers", [])
+
 def herbereken_stats(seizoen, data):
     # stats resetten
     data[seizoen]["stats"] = {s: {"goals": 0, "assists": 0} for s in SPELERS}
@@ -168,7 +171,7 @@ def wedstrijd(seizoen):
         return redirect(url_for("overzicht", seizoen=seizoen))
 
     # ✅ BIJ GET: hier mag GEEN maker-logica staan
-    return render_template("wedstrijd.html",seizoen=seizoen,spelers=SPELERS)
+    return render_template("wedstrijd.html",seizoen=seizoen,spelers=laad_spelers(data)
 
 @app.route("/wedstrijd/bewerk/<seizoen>/<wedstrijdnaam>", methods=["GET", "POST"])
 def wedstrijd_bewerken(seizoen, wedstrijdnaam):
@@ -209,8 +212,7 @@ def wedstrijd_bewerken(seizoen, wedstrijdnaam):
         seizoen=seizoen,
         wedstrijdnaam=wedstrijdnaam,
         wedstrijd=wedstrijd,
-        spelers=SPELERS
-    )
+        spelers=laad_spelers(data)
 
 @app.route("/wedstrijden/<seizoen>")
 def wedstrijden_lijst(seizoen):
