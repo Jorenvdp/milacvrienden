@@ -189,7 +189,7 @@ def wedstrijd(seizoen):
         return redirect(url_for("overzicht", seizoen=seizoen))
 
     # ✅ BIJ GET: hier mag GEEN maker-logica staan
-    return render_template("wedstrijd.html",seizoen=seizoen,spelers=laad_spelers(data)
+    return render_template("wedstrijd.html",seizoen=seizoen,spelers=laad_spelers(data))
 
 from urllib.parse import unquote
 
