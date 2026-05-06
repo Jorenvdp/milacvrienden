@@ -306,7 +306,7 @@
                 "assists": 0
             },
             "Mathias": {
-                "goals": 0,
+                "goals": 1,
                 "assists": 0
             },
             "Ruben": {
@@ -347,9 +347,20 @@
             }
         },
         "team": {
-            "goals": 0,
+            "goals": 1,
             "tegen": 0
         },
-        "wedstrijden": {}
+        "wedstrijden": {
+            "Zanzi": {
+                "goals": 1,
+                "tegen": 0,
+                "doelpunten": [
+                    {
+                        "maker": "Mathias",
+                        "assist": "Geen"
+                    }
+                ]
+            }
+        }
     }
 }
