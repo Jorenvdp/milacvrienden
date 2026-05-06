@@ -190,7 +190,13 @@ def wedstrijd(seizoen):
         return redirect(url_for("overzicht", seizoen=seizoen))
 
     # ✅ BIJ GET: hier mag GEEN maker-logica staan
-    return render_template("wedstrijd.html",seizoen=seizoen,spelers=laad_spelers(data))
+    
+return render_template(
+    "wedstrijd.html",
+    seizoen=seizoen,
+    spelers=laad_spelers(data),
+    goals=goals   # ✅ DIT WAS DE MISSENDE SCHAKEL
+)
 
 @app.route("/wedstrijd/bewerk/<seizoen>/<wedstrijdnaam>", methods=["GET", "POST"])
 def wedstrijd_bewerken(seizoen, wedstrijdnaam):
