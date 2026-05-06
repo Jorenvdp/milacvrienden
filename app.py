@@ -151,37 +151,33 @@ def speler_toevoegen():
 @app.route("/wedstrijd/<seizoen>", methods=["GET", "POST"])
 def wedstrijd(seizoen):
     data = laad_data()
+
+    # ✅ ALTIJD een waarde hebben (ook bij GET)
     goals = int(request.form.get("goals", 0))
 
+    # ✅ Alleen opslaan bij echte submit
     if request.method == "POST" and "wedstrijdnaam" in request.form:
-        # ✅ hier pas beginnen we aan form-data
+
+        if request.form.get("password") != ADMIN_PASSWORD:
+            return "Geen toegang", 403
+
         wedstrijdnaam = request.form["wedstrijdnaam"]
-        goals = int(request.form["goals"])
         tegen = int(request.form["tegen"])
 
-        wedstrijd_data = {
-            "goals": goals,
-            "tegen": tegen,
-            "doelpunten": []
-        }
-
-        # ✅ maker bestaat ALLEEN hierbinnen
+        doelpunten = []
         for i in range(goals):
             maker = request.form.get(f"maker{i}")
             assist = request.form.get(f"assist{i}")
+            doelpunten.append({
+                "maker": maker,
+                "assist": assist
+            })
 
-            if maker in ("Owngoal", "OWONGOAL"):
-                wedstrijd_data["doelpunten"].append({
-                    "maker": "OWONGOAL",
-                    "assist": None
-                })
-            else:
-                wedstrijd_data["doelpunten"].append({
-                    "maker": maker,
-                    "assist": assist
-                })
-
-        data[seizoen]["wedstrijden"][wedstrijdnaam] = wedstrijd_data
+        data[seizoen]["wedstrijden"][wedstrijdnaam] = {
+            "goals": goals,
+            "tegen": tegen,
+            "doelpunten": doelpunten
+        }
 
         herbereken_stats(seizoen, data)
         bewaar_data(data)
@@ -189,14 +185,13 @@ def wedstrijd(seizoen):
 
         return redirect(url_for("overzicht", seizoen=seizoen))
 
-    # ✅ BIJ GET: hier mag GEEN maker-logica staan
-    
+    # ✅ HIER ZAT DE CRASH: goals moet OOIT meegestuurd worden
     return render_template(
-    "wedstrijd.html",
-    seizoen=seizoen,
-    spelers=laad_spelers(data),
-    goals=goals   # ✅ DIT WAS DE MISSENDE SCHAKEL
-)
+        "wedstrijd.html",
+        seizoen=seizoen,
+        spelers=laad_spelers(data),
+        goals=goals
+    )
 
 @app.route("/wedstrijd/bewerk/<seizoen>/<wedstrijdnaam>", methods=["GET", "POST"])
 def wedstrijd_bewerken(seizoen, wedstrijdnaam):
