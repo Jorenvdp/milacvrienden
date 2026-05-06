@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request, redirect, url_for
 import json
 import os
+import requests
+import base64
 from urllib.parse import unquote
 
 app = Flask(__name__)
@@ -21,6 +23,44 @@ def lege_seizoensdata():
         "team": {"goals": 0, "tegen": 0},
         "wedstrijden": {}   # ✅ ZEER BELANGRIJK
     }
+def push_json_to_github():
+    print("🚀 push_json_to_github() CALLED")
+
+    token = os.environ.get("GITHUB_TOKEN")
+    repo = os.environ.get("GITHUB_REPO")
+    branch = os.environ.get("GITHUB_BRANCH", "main")
+
+    if not token or not repo:
+        print("❌ GitHub push skipped: missing credentials")
+        return
+
+    url = f"https://api.github.com/repos/{repo}/contents/milacvrienden_data.json"
+
+    with open("milacvrienden_data.json", "rb") as f:
+        content = f.read()
+
+    encoded = base64.b64encode(content).decode("utf-8")
+
+    headers = {
+        "Authorization": f"token {token}",
+        "Accept": "application/vnd.github+json"
+    }
+
+    r = requests.get(url, headers=headers)
+    sha = r.json().get("sha") if r.status_code == 200 else None
+
+    payload = {
+        "message": "Update data via app",
+        "content": encoded,
+        "branch": branch
+    }
+
+    if sha:
+        payload["sha"] = sha
+
+    print("📤 Pushing JSON to GitHub...")
+    response = requests.put(url, headers=headers, json=payload)
+    print("✅ GitHub response:", response.status_code, response.text)
 
 def laad_data():
     if os.path.exists(DATA_FILE):
