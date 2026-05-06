@@ -298,11 +298,11 @@
     "2026-2027": {
         "stats": {
             "Joren": {
-                "goals": 1,
+                "goals": 0,
                 "assists": 0
             },
             "Jonas": {
-                "goals": 1,
+                "goals": 0,
                 "assists": 0
             },
             "Mathias": {
@@ -347,23 +347,14 @@
             }
         },
         "team": {
-            "goals": 2,
+            "goals": 0,
             "tegen": 0
         },
         "wedstrijden": {
             "Zanzi": {
-                "goals": 2,
+                "goals": 0,
                 "tegen": 0,
-                "doelpunten": [
-                    {
-                        "maker": "Joren",
-                        "assist": "Geen"
-                    },
-                    {
-                        "maker": "Jonas",
-                        "assist": "Geen"
-                    }
-                ]
+                "doelpunten": []
             }
         }
     },
