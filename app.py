@@ -191,7 +191,7 @@ def wedstrijd(seizoen):
 
     # ✅ BIJ GET: hier mag GEEN maker-logica staan
     
-return render_template(
+    return render_template(
     "wedstrijd.html",
     seizoen=seizoen,
     spelers=laad_spelers(data),
