@@ -222,7 +222,7 @@ def wedstrijd_bewerken(seizoen, wedstrijdnaam):
         push_json_to_github()
         return redirect(url_for("overzicht", seizoen=seizoen))
 
-    return render_template(
+        return render_template(
         "wedstrijd_bewerk.html",
         seizoen=seizoen,
         wedstrijdnaam=wedstrijdnaam,
