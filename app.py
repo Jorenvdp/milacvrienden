@@ -191,16 +191,17 @@ def wedstrijd(seizoen):
     # ✅ BIJ GET: hier mag GEEN maker-logica staan
     return render_template("wedstrijd.html",seizoen=seizoen,spelers=laad_spelers(data)
 
+from urllib.parse import unquote
+
 @app.route("/wedstrijd/bewerk/<seizoen>/<wedstrijdnaam>", methods=["GET", "POST"])
 def wedstrijd_bewerken(seizoen, wedstrijdnaam):
-
     wedstrijdnaam = unquote(wedstrijdnaam)
     data = laad_data()
     wedstrijd = data[seizoen]["wedstrijden"][wedstrijdnaam]
 
     if request.method == "POST":
 
-        # ✅ WACHTWOORDCHECK ALLEEN BIJ POST
+        # ✅ wachtwoordcheck
         if request.form.get("password") != ADMIN_PASSWORD:
             return "Geen toegang", 403
 
@@ -218,6 +219,18 @@ def wedstrijd_bewerken(seizoen, wedstrijdnaam):
                 "maker": maker,
                 "assist": assist
             })
+
+        bewaar_data(data)
+        push_json_to_github()
+        return redirect(url_for("overzicht", seizoen=seizoen))
+
+    return render_template(
+        "wedstrijd_bewerk.html",
+        seizoen=seizoen,
+        wedstrijdnaam=wedstrijdnaam,
+        wedstrijd=wedstrijd,
+        spelers=laad_spelers(data)
+    )
 
         herbereken_stats(seizoen, data)
         bewaar_data(data)
