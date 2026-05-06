@@ -49,6 +49,7 @@
         </div>
     {% endfor %}
 </div>
+<br><br>
 
 <label>Beheerderswachtwoord</label><br>
 <input type="password" name="password" required>
@@ -58,8 +59,6 @@
     <button type="submit">Opslaan</button>
 </form>
 
-<br>
-{{ url_for('wedstrijden_lijst', seizoen=seizoen) }}← Terug naar wedstrijden</a>
 <script>
 const spelers = {{ spelers | tojson }};
 
