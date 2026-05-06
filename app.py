@@ -96,46 +96,42 @@ def wedstrijd(seizoen):
     data = laad_data()
 
     if request.method == "POST":
-
-        # ✅ WACHTWOORDCHECK MAG ALLEEN HIER STAAN
-        if request.form.get("password") != ADMIN_PASSWORD:
-            return "Geen toegang", 403
-
+        # ✅ hier pas beginnen we aan form-data
         wedstrijdnaam = request.form["wedstrijdnaam"]
         goals = int(request.form["goals"])
         tegen = int(request.form["tegen"])
 
-        if "wedstrijden" not in data[seizoen]:
-            data[seizoen]["wedstrijden"] = {}
-
-        data[seizoen]["wedstrijden"][wedstrijdnaam] = {
+        wedstrijd_data = {
             "goals": goals,
             "tegen": tegen,
             "doelpunten": []
         }
 
+        # ✅ maker bestaat ALLEEN hierbinnen
         for i in range(goals):
-            maker = request.form[f"maker{i}"]
-            assist = request.form[f"assist{i}"]
+            maker = request.form.get(f"maker{i}")
+            assist = request.form.get(f"assist{i}")
 
-    # ✅ Als het een owngoal is
-    if maker == "OWONGOAL":
-        data[seizoen]["wedstrijden"][wedstrijdnaam]["doelpunten"].append({
-            "maker": "OWONGOAL",
-            "assist": None
-        })
-    else:
-        data[seizoen]["wedstrijden"][wedstrijdnaam]["doelpunten"].append({
-            "maker": maker,
-            "assist": assist
-        })
+            if maker in ("Owngoal", "OWONGOAL"):
+                wedstrijd_data["doelpunten"].append({
+                    "maker": "OWONGOAL",
+                    "assist": None
+                })
+            else:
+                wedstrijd_data["doelpunten"].append({
+                    "maker": maker,
+                    "assist": assist
+                })
+
+        data[seizoen]["wedstrijden"][wedstrijdnaam] = wedstrijd_data
 
         herbereken_stats(seizoen, data)
         bewaar_data(data)
+
         return redirect(url_for("overzicht", seizoen=seizoen))
 
-    # ✅ BIJ GET: GEEN WACHTWOORDCHECK
-    return render_template("wedstrijd.html", seizoen=seizoen, spelers=SPELERS)
+    # ✅ BIJ GET: hier mag GEEN maker-logica staan
+    return render_template("wedstrijd.html",seizoen=seizoen,spelers=SPELERS)
 
 @app.route("/wedstrijd/bewerk/<seizoen>/<wedstrijdnaam>", methods=["GET", "POST"])
 def wedstrijd_bewerken(seizoen, wedstrijdnaam):
