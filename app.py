@@ -151,8 +151,9 @@ def speler_toevoegen():
 @app.route("/wedstrijd/<seizoen>", methods=["GET", "POST"])
 def wedstrijd(seizoen):
     data = laad_data()
+    goals = int(request.form.get("goals", 0))
 
-    if request.method == "POST":
+    if request.method == "POST" and "wedstrijdnaam" in request.form:
         # ✅ hier pas beginnen we aan form-data
         wedstrijdnaam = request.form["wedstrijdnaam"]
         goals = int(request.form["goals"])
