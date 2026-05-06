@@ -40,6 +40,25 @@ Tegen: {{ data.team.tegen }}
     <button>✏️ Wedstrijden aanpassen</button>
 </a>
 
+<h3>Speler toevoegen</h3>
+
+<form method="post" action="/speler/toevoegen">
+  <input
+    type="text"
+    name="naam"
+    placeholder="Naam speler"
+    required
+  >
+  <br><br>
+  <input
+    type="password"
+    name="password"
+    placeholder="Beheerderswachtwoord"
+    required
+  >
+  <br><br>
+  <button type="submit">Toevoegen</button>
+</form>
 
 <br><br>
     
