@@ -130,6 +130,24 @@ def nieuw_seizoen():
 
     return redirect(url_for("index"))
 
+@app.route("/speler/toevoegen", methods=["POST"])
+def speler_toevoegen():
+    if request.form.get("password") != ADMIN_PASSWORD:
+        return "Geen toegang", 403
+
+    data = laad_data()
+    naam = request.form["naam"].strip()
+
+    if "spelers" not in data:
+        data["spelers"] = []
+
+    if naam and naam not in data["spelers"]:
+        data["spelers"].append(naam)
+        bewaar_data(data)
+        push_json_to_github()
+
+    return redirect(request.referrer or url_for("index"))
+
 @app.route("/wedstrijd/<seizoen>", methods=["GET", "POST"])
 def wedstrijd(seizoen):
     data = laad_data()
