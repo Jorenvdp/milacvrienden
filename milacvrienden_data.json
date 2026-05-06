@@ -347,7 +347,7 @@
             }
         },
         "team": {
-            "goals": 0,
+            "goals": 2,
             "tegen": 0
         },
         "wedstrijden": {
@@ -355,6 +355,20 @@
                 "goals": 0,
                 "tegen": 0,
                 "doelpunten": []
+            },
+            "Den Bels": {
+                "goals": 2,
+                "tegen": 0,
+                "doelpunten": [
+                    {
+                        "maker": null,
+                        "assist": null
+                    },
+                    {
+                        "maker": null,
+                        "assist": null
+                    }
+                ]
             }
         }
     },
