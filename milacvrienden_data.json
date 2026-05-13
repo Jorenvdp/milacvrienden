@@ -298,20 +298,20 @@
     "2026-2027": {
         "stats": {
             "Joren": {
-                "goals": 1,
+                "goals": 0,
                 "assists": 0
             },
             "Jonas": {
-                "goals": 1,
-                "assists": 1
+                "goals": 0,
+                "assists": 0
             },
             "Mathias": {
-                "goals": 1,
+                "goals": 0,
                 "assists": 0
             },
             "Ruben": {
                 "goals": 0,
-                "assists": 1
+                "assists": 0
             },
             "Tim": {
                 "goals": 0,
@@ -323,7 +323,7 @@
             },
             "Koen": {
                 "goals": 0,
-                "assists": 1
+                "assists": 0
             },
             "Yannick": {
                 "goals": 0,
@@ -347,7 +347,7 @@
             }
         },
         "team": {
-            "goals": 3,
+            "goals": 0,
             "tegen": 0
         },
         "wedstrijden": {
@@ -357,22 +357,9 @@
                 "doelpunten": []
             },
             "Den Bels": {
-                "goals": 3,
+                "goals": 0,
                 "tegen": 0,
-                "doelpunten": [
-                    {
-                        "maker": "Mathias",
-                        "assist": "Koen"
-                    },
-                    {
-                        "maker": "Jonas",
-                        "assist": "Ruben"
-                    },
-                    {
-                        "maker": "Joren",
-                        "assist": "Jonas"
-                    }
-                ]
+                "doelpunten": []
             }
         }
     },
