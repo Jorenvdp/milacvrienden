@@ -298,7 +298,7 @@
     "2026-2027": {
         "stats": {
             "Joren": {
-                "goals": 0,
+                "goals": 1,
                 "assists": 0
             },
             "Jonas": {
@@ -347,19 +347,33 @@
             }
         },
         "team": {
-            "goals": 0,
+            "goals": 3,
             "tegen": 0
         },
         "wedstrijden": {
             "Zanzi": {
-                "goals": 0,
+                "goals": 1,
                 "tegen": 0,
-                "doelpunten": []
+                "doelpunten": [
+                    {
+                        "maker": "Joren",
+                        "assist": "Geen"
+                    }
+                ]
             },
             "Den Bels": {
-                "goals": 0,
+                "goals": 2,
                 "tegen": 0,
-                "doelpunten": []
+                "doelpunten": [
+                    {
+                        "maker": null,
+                        "assist": null
+                    },
+                    {
+                        "maker": null,
+                        "assist": null
+                    }
+                ]
             }
         }
     },
