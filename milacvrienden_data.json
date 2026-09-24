@@ -323,18 +323,18 @@
             },
             "Mathias": {
                 "goals": 0,
-                "assists": 0
+                "assists": 1
             },
             "Ruben": {
                 "goals": 0,
-                "assists": 0
+                "assists": 1
             },
             "Tim": {
                 "goals": 0,
                 "assists": 0
             },
             "Jelle": {
-                "goals": 0,
+                "goals": 1,
                 "assists": 0
             },
             "Koen": {
@@ -342,7 +342,7 @@
                 "assists": 0
             },
             "Yannick": {
-                "goals": 0,
+                "goals": 1,
                 "assists": 0
             },
             "Kwinten": {
@@ -363,41 +363,21 @@
             }
         },
         "team": {
-            "goals": 7,
+            "goals": 2,
             "tegen": 7
         },
         "wedstrijden": {
             "Zanzi": {
-                "goals": 7,
+                "goals": 2,
                 "tegen": 7,
                 "doelpunten": [
                     {
-                        "maker": "Sylvio",
-                        "assist": "Geen"
+                        "maker": "Yannick",
+                        "assist": "Mathias"
                     },
                     {
-                        "maker": "Sylvio",
-                        "assist": "Geen"
-                    },
-                    {
-                        "maker": "Sylvio",
-                        "assist": "Geen"
-                    },
-                    {
-                        "maker": "Sylvio",
-                        "assist": "Geen"
-                    },
-                    {
-                        "maker": "Sylvio",
-                        "assist": "Geen"
-                    },
-                    {
-                        "maker": "Sylvio",
-                        "assist": "Geen"
-                    },
-                    {
-                        "maker": "Sylvio",
-                        "assist": "Geen"
+                        "maker": "Jelle",
+                        "assist": "Ruben"
                     }
                 ]
             }
