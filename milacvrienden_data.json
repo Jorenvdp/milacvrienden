@@ -363,11 +363,25 @@
             }
         },
         "team": {
-            "goals": 2,
+            "goals": 4,
             "tegen": 0
         },
         "wedstrijden": {
             "test": {
+                "goals": 2,
+                "tegen": 0,
+                "doelpunten": [
+                    {
+                        "maker": null,
+                        "assist": null
+                    },
+                    {
+                        "maker": null,
+                        "assist": null
+                    }
+                ]
+            },
+            "testen ": {
                 "goals": 2,
                 "tegen": 0,
                 "doelpunten": [
