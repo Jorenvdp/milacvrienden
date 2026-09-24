@@ -293,9 +293,8 @@
                     }
                 ]
             }
-        }
+               }
     },
-            }
     "spelers": [
         "Sylvio",
         "Joren",
@@ -308,7 +307,8 @@
         "Yannick",
         "Kwinten",
         "Lieven",
-        "kris",
+        "Kris",
         "Spons",
         "Robby"
     ]
+}
