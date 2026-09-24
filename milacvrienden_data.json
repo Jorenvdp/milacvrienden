@@ -315,14 +315,14 @@
         "stats": {
             "Joren": {
                 "goals": 0,
-                "assists": 0
+                "assists": 1
             },
             "Jonas": {
                 "goals": 0,
-                "assists": 0
+                "assists": 1
             },
             "Mathias": {
-                "goals": 0,
+                "goals": 1,
                 "assists": 0
             },
             "Ruben": {
@@ -334,7 +334,7 @@
                 "assists": 0
             },
             "Jelle": {
-                "goals": 0,
+                "goals": 1,
                 "assists": 0
             },
             "Koen": {
@@ -347,14 +347,14 @@
             },
             "Kwinten": {
                 "goals": 0,
-                "assists": 0
+                "assists": 1
             },
             "Kris": {
                 "goals": 0,
                 "assists": 0
             },
             "Lieven": {
-                "goals": 0,
+                "goals": 1,
                 "assists": 0
             },
             "Davy": {
@@ -363,7 +363,7 @@
             }
         },
         "team": {
-            "goals": 4,
+            "goals": 8,
             "tegen": 0
         },
         "wedstrijden": {
@@ -392,6 +392,28 @@
                     {
                         "maker": null,
                         "assist": null
+                    }
+                ]
+            },
+            "": {
+                "goals": 4,
+                "tegen": 0,
+                "doelpunten": [
+                    {
+                        "maker": "Jelle",
+                        "assist": "Jonas"
+                    },
+                    {
+                        "maker": "Mathias",
+                        "assist": "Joren"
+                    },
+                    {
+                        "maker": "Spons",
+                        "assist": "Kwinten"
+                    },
+                    {
+                        "maker": "Lieven",
+                        "assist": "Spons"
                     }
                 ]
             }
