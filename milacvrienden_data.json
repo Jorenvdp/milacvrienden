@@ -322,7 +322,7 @@
                 "assists": 0
             },
             "Mathias": {
-                "goals": 1,
+                "goals": 0,
                 "assists": 0
             },
             "Ruben": {
@@ -335,7 +335,7 @@
             },
             "Jelle": {
                 "goals": 0,
-                "assists": 1
+                "assists": 0
             },
             "Koen": {
                 "goals": 0,
@@ -363,17 +363,41 @@
             }
         },
         "team": {
-            "goals": 1,
-            "tegen": 0
+            "goals": 7,
+            "tegen": 7
         },
         "wedstrijden": {
             "Zanzi": {
-                "goals": 1,
-                "tegen": 0,
+                "goals": 7,
+                "tegen": 7,
                 "doelpunten": [
                     {
-                        "maker": "Mathias",
-                        "assist": "Jelle"
+                        "maker": "Sylvio",
+                        "assist": "Geen"
+                    },
+                    {
+                        "maker": "Sylvio",
+                        "assist": "Geen"
+                    },
+                    {
+                        "maker": "Sylvio",
+                        "assist": "Geen"
+                    },
+                    {
+                        "maker": "Sylvio",
+                        "assist": "Geen"
+                    },
+                    {
+                        "maker": "Sylvio",
+                        "assist": "Geen"
+                    },
+                    {
+                        "maker": "Sylvio",
+                        "assist": "Geen"
+                    },
+                    {
+                        "maker": "Sylvio",
+                        "assist": "Geen"
                     }
                 ]
             }
