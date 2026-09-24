@@ -83,7 +83,7 @@ def laad_spelers(data):
 
 def herbereken_stats(seizoen, data):
     # stats resetten
-    data[seizoen]["stats"] = {s: {"goals": 0, "assists": 0} for s in SPELERS}
+    data[seizoen]["stats"] = {s: {"goals": 0, "assists": 0}for s in laad_spelers(data)}
     data[seizoen]["team"]["goals"] = 0
     data[seizoen]["team"]["tegen"] = 0
 
