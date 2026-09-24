@@ -313,10 +313,6 @@
     ],
     "2026-2027": {
         "stats": {
-            "Sylvio": {
-                "goals": 0,
-                "assists": 0
-            },
             "Joren": {
                 "goals": 0,
                 "assists": 0
@@ -325,12 +321,8 @@
                 "goals": 0,
                 "assists": 0
             },
-            "Jelle": {
-                "goals": 0,
-                "assists": 0
-            },
             "Mathias": {
-                "goals": 0,
+                "goals": 1,
                 "assists": 0
             },
             "Ruben": {
@@ -340,6 +332,10 @@
             "Tim": {
                 "goals": 0,
                 "assists": 0
+            },
+            "Jelle": {
+                "goals": 0,
+                "assists": 1
             },
             "Koen": {
                 "goals": 0,
@@ -353,27 +349,34 @@
                 "goals": 0,
                 "assists": 0
             },
-            "Lieven": {
-                "goals": 0,
-                "assists": 0
-            },
             "Kris": {
                 "goals": 0,
                 "assists": 0
             },
-            "Spons": {
+            "Lieven": {
                 "goals": 0,
                 "assists": 0
             },
-            "Robby": {
+            "Davy": {
                 "goals": 0,
                 "assists": 0
             }
         },
         "team": {
-            "goals": 0,
+            "goals": 1,
             "tegen": 0
         },
-        "wedstrijden": {}
+        "wedstrijden": {
+            "": {
+                "goals": 1,
+                "tegen": 0,
+                "doelpunten": [
+                    {
+                        "maker": "Mathias",
+                        "assist": "Jelle"
+                    }
+                ]
+            }
+        }
     }
 }
