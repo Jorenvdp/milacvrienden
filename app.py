@@ -111,6 +111,18 @@ def normaliseer_naam(naam):
 def kies_seizoen():
     seizoen = request.args.get("seizoen")
     return redirect(url_for("overzicht", seizoen=seizoen))
+@app.route("/", methods=["GET", "POST"])
+def index():
+data = laad_data()
+ 
+print("DATA KEYS:", list(data.keys()))
+ 
+seizoenen = sorted(s for s in data.keys() if s != "spelers")
+ 
+return render_template(
+"index.html",
+seizoenen=seizoenen
+)
 
 @app.route("/", methods=["GET", "POST"])
 def index():
