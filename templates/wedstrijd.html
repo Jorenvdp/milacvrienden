@@ -18,7 +18,7 @@
 <br><br>
     
 Goals:
-<select name="goals" onchange="this.form.submit()">
+<select name="goals">
     {% for i in range(11) %}
         <option value="{{ i }}" {% if i == goals %}selected{% endif %}>
             {{ i }}
