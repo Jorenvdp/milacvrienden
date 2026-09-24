@@ -159,7 +159,9 @@ def wedstrijd(seizoen):
 
     # ✅ goals ALTIJD bepalen
     goals = int(request.form.get("goals", 0))
-
+    print("POST =", request.method)
+    print("FORM =", request.form)
+    print("SUBMIT =", "submit" in request.form)
     # ✅ ENKEL bij echte submit controleren + opslaan
     if request.method == "POST" and "submit" in request.form:
 
