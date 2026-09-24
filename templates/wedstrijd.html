@@ -17,13 +17,17 @@
 <br><br>
 <p><strong>DEBUG goals = {{ goals }}</strong></p>    
 Goals:
-<select name="goals" id="goals" onchange="this.form.submit()">
-    {% for i in range(11) %}
-        <option value="{{ i }}" {% if i == goals %}selected{% endif %}>
-            {{ i }}
-        </option>
-    {% endfor %}
+<select name="goals" id="goals">
+{% for i in range(11) %}
+<option value="{{ i }}" {% if i == goals %}selected{% endif %}>
+{{ i }}
+</option>
+{% endfor %}
 </select>
+ 
+<button type="submit" name="toon_goals">
+Toon goalvelden
+</button>
 
 
 Tegen:
