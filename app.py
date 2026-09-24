@@ -17,11 +17,17 @@ SPELERS = [
     "Koen", "Yannick", "Kwinten", "Kris", "Lieven", "Davy"
 ]
 
-def lege_seizoensdata():
+def lege_seizoensdata(data):
     return {
-        "stats": {s: {"goals": 0, "assists": 0} for s in SPELERS},
-        "team": {"goals": 0, "tegen": 0},
-        "wedstrijden": {}   # ✅ ZEER BELANGRIJK
+        "stats": {
+            s: {"goals": 0, "assists": 0}
+            for s in data.get("spelers", [])
+        },
+        "team": {
+            "goals": 0,
+            "tegen": 0
+        },
+        "wedstrijden": {}
     }
 def push_json_to_github():
     print("🚀 push_json_to_github() CALLED")
@@ -125,8 +131,10 @@ def nieuw_seizoen():
     data = laad_data()
 
     if seizoen not in data:
-        data[seizoen] = lege_seizoensdata()   # ✅ DIT IS CRUCIAAL
+        data[seizoen] = lege_seizoensdata(data)
+
         bewaar_data(data)
+        push_json_to_github()
 
     return redirect(url_for("index"))
 
