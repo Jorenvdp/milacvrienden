@@ -122,16 +122,6 @@ return render_template(
 "index.html",
 seizoenen=seizoenen
 )
-
-@app.route("/", methods=["GET", "POST"])
-def index():
-    data = laad_data()
-    seizoenen = sorted(s for s in data.keys() if s != "spelers")
-    return render_template(
-        "index.html",
-        seizoenen=seizoenen
-    )
-
 @app.route("/nieuw_seizoen", methods=["POST"])
 def nieuw_seizoen():
     if request.form.get("password") != ADMIN_PASSWORD:
