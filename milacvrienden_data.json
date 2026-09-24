@@ -295,73 +295,7 @@
             }
         }
     },
-    "2026-2027": {
-        "stats": {
-            "Joren": {
-                "goals": 0,
-                "assists": 0
-            },
-            "Jonas": {
-                "goals": 0,
-                "assists": 0
-            },
-            "Mathias": {
-                "goals": 0,
-                "assists": 0
-            },
-            "Ruben": {
-                "goals": 0,
-                "assists": 0
-            },
-            "Tim": {
-                "goals": 0,
-                "assists": 0
-            },
-            "Jelle": {
-                "goals": 0,
-                "assists": 0
-            },
-            "Koen": {
-                "goals": 0,
-                "assists": 0
-            },
-            "Yannick": {
-                "goals": 0,
-                "assists": 0
-            },
-            "Kwinten": {
-                "goals": 0,
-                "assists": 0
-            },
-            "Kris": {
-                "goals": 0,
-                "assists": 0
-            },
-            "Lieven": {
-                "goals": 0,
-                "assists": 0
-            },
-            "Davy": {
-                "goals": 0,
-                "assists": 0
             }
-        },
-        "team": {
-            "goals": 0,
-            "tegen": 0
-        },
-        "wedstrijden": {
-            "Zanzi": {
-                "goals": 0,
-                "tegen": 0,
-                "doelpunten": []
-            },
-            "Den Bels": {
-                "goals": 0,
-                "tegen": 0,
-                "doelpunten": []
-            }
-        }
     },
     "spelers": [
         "Sylvio",
