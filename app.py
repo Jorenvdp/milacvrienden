@@ -12,10 +12,6 @@ ADMIN_PASSWORD = "vriendenmilac"
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_FILE = os.path.join(BASE_DIR, "milacvrienden_data.json")
 
-SPELERS = [
-    "Joren", "Jonas", "Mathias", "Ruben", "Tim", "Jelle",
-    "Koen", "Yannick", "Kwinten", "Kris", "Lieven", "Davy"
-]
 
 def lege_seizoensdata(data):
     return {
