@@ -116,7 +116,6 @@ def kies_seizoen():
 def index():
     data = laad_data()
     seizoenen = sorted(s for s in data.keys() if s != "spelers")
-
     return render_template(
         "index.html",
         seizoenen=seizoenen
