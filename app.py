@@ -166,7 +166,8 @@ def wedstrijd(seizoen):
 
         wedstrijdnaam = request.form["wedstrijdnaam"]
         tegen = int(request.form["tegen"])
-
+        keeper = request.form["keeper"]
+        saves = int(request.form.get("saves", 0))
         doelpunten = []
         for i in range(goals):
             maker = request.form.get(f"maker{i}")
