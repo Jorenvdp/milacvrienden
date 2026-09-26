@@ -164,7 +164,7 @@ def wedstrijd(seizoen):
         if request.form.get("password") != ADMIN_PASSWORD:
             return "Geen toegang", 403
 
-        wedstrijdnaam = request["wedstrijdnaam"]
+        wedstrijdnaam = request.form["wedstrijdnaam"]
         tegen = int(request.form["tegen"])
         keeper = request.form["keeper"]
         saves = int(request.form.get("saves", 0))
