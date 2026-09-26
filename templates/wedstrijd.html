@@ -36,6 +36,21 @@ Tegen:
         <option value="{{ i }}">{{ i }}</option>
     {% endfor %}
 </select>
+
+<br><br>
+
+Keeper:
+<select name="keeper">
+{% for s in spelers %}
+<option value="{{ s }}">{{ s }}</option>
+{% endfor %}
+</select>
+ 
+Saves:
+<input type="number" name="saves" value="0" min="0">
+ 
+<br><br>
+    
 {% for i in range(goals) %}
 
     <p>Goal {{ i + 1 }}</p>
