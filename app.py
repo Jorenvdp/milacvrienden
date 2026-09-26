@@ -180,6 +180,8 @@ def wedstrijd(seizoen):
         data[seizoen]["wedstrijden"][wedstrijdnaam] = {
             "goals": goals,
             "tegen": tegen,
+            "keeper": keeper,
+            "saves": saves,
             "doelpunten": doelpunten
         }
 
