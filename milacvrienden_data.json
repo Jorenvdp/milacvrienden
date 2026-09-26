@@ -371,8 +371,8 @@
             }
         },
         "team": {
-            "goals": 3,
-            "tegen": 8
+            "goals": 2,
+            "tegen": 7
         },
         "wedstrijden": {
             "Zanzi": {
@@ -390,16 +390,11 @@
                 ]
             },
             "Test": {
-                "goals": 1,
-                "tegen": 1,
+                "goals": 0,
+                "tegen": 0,
                 "keeper": "Kwinten",
                 "saves": 7,
-                "doelpunten": [
-                    {
-                        "maker": "OWONGOAL",
-                        "assist": ""
-                    }
-                ]
+                "doelpunten": []
             }
         }
     }
