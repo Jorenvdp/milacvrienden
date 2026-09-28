@@ -84,6 +84,11 @@ def herbereken_stats(seizoen, data):
     data[seizoen]["team"]["tegen"] = 0
 
     for wedstrijd in data[seizoen].get("wedstrijden", {}).values():
+        keeper = wedstrijd.get("keeper")
+        saves = wedstrijd.get("saves", 0)
+ 
+        if keeper in data[seizoen]["stats"\]:
+            data[seizoen]["stats"][keeper]["saves"] += saves
         data[seizoen]["team"]["goals"] += wedstrijd["goals"]
         data[seizoen]["team"]["tegen"] += wedstrijd["tegen"]
 
@@ -262,11 +267,8 @@ def overzicht(seizoen):
 
     goals = sorted(data["stats"].items(), key=lambda x: x[1]["goals"], reverse=True)
     assists = sorted(data["stats"].items(), key=lambda x: x[1]["assists"], reverse=True)
-    combo = sorted(
-        data["stats"].items(),
-        key=lambda x: x[1]["goals"] + x[1]["assists"],
-        reverse=True
-    )
+    combo = sorted(data["stats"].items(),key=lambda x: x[1]["goals"] + x[1]["assists"],reverse=True)
+    saves = sorted(data["stats"].items(),key=lambda x: x[1].get("saves", 0),reverse=True)
 
     return render_template(
         "overzicht.html",
@@ -274,7 +276,7 @@ def overzicht(seizoen):
         data=data,
         goals=goals,
         assists=assists,
-        combo=combo
+        combo=combo,saves=saves
     )
 
 if __name__ == "__main__":
