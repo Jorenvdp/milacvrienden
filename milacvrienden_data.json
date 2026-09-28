@@ -315,59 +315,73 @@
         "stats": {
             "Sylvio": {
                 "goals": 0,
-                "assists": 0
+                "assists": 0,
+                "saves": 0
             },
             "Joren": {
                 "goals": 0,
-                "assists": 0
+                "assists": 0,
+                "saves": 0
             },
             "Jonas": {
                 "goals": 0,
-                "assists": 0
+                "assists": 0,
+                "saves": 0
             },
             "Jelle": {
                 "goals": 1,
-                "assists": 0
+                "assists": 0,
+                "saves": 0
             },
             "Mathias": {
                 "goals": 0,
-                "assists": 1
+                "assists": 1,
+                "saves": 0
             },
             "Ruben": {
                 "goals": 0,
-                "assists": 1
+                "assists": 1,
+                "saves": 0
             },
             "Tim": {
                 "goals": 0,
-                "assists": 0
+                "assists": 0,
+                "saves": 0
             },
             "Koen": {
                 "goals": 0,
-                "assists": 0
+                "assists": 0,
+                "saves": 0
             },
             "Yannick": {
                 "goals": 1,
-                "assists": 0
+                "assists": 0,
+                "saves": 0
             },
             "Kwinten": {
                 "goals": 0,
-                "assists": 0
+                "assists": 0,
+                "saves": 14
             },
             "Lieven": {
                 "goals": 0,
-                "assists": 0
+                "assists": 0,
+                "saves": 0
             },
             "Kris": {
                 "goals": 0,
-                "assists": 0
+                "assists": 0,
+                "saves": 0
             },
             "Spons": {
                 "goals": 0,
-                "assists": 0
+                "assists": 0,
+                "saves": 0
             },
             "Robby": {
                 "goals": 0,
-                "assists": 0
+                "assists": 0,
+                "saves": 0
             }
         },
         "team": {
@@ -390,6 +404,13 @@
                 ]
             },
             "Test": {
+                "goals": 0,
+                "tegen": 0,
+                "keeper": "Kwinten",
+                "saves": 7,
+                "doelpunten": []
+            },
+            "test": {
                 "goals": 0,
                 "tegen": 0,
                 "keeper": "Kwinten",
