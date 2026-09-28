@@ -394,6 +394,8 @@
             "Zanzi": {
                 "goals": 2,
                 "tegen": 7,
+                "keeper": "Kwinten",
+                "saves": 7,
                 "doelpunten": [
                     {
                         "maker": "Yannick",
@@ -405,4 +407,7 @@
                     }
                 ]
             }
+        }
+    }
+}
         }
