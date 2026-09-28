@@ -31,7 +31,7 @@ Tegen: {{ data.team.tegen }}
 <h3>🥅 Saves</h3>
 
 <ol>
-{% for speler, stats in saves if stats["saves"] > 0 %}
+{% for speler, stats in saves if stats.get("saves", 0) > 0 %}
     <li>{{ speler }} - {{ stats["saves"] }}</li>
 {% endfor %}
 </ol>  
