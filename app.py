@@ -276,7 +276,7 @@ def overzicht(seizoen):
         data=data,
         goals=goals,
         assists=assists,
-        combo=combo,saves=saves
+        combo=combo,saves=saves,
         totaal_saves=totaal_saves
     )
 
