@@ -87,7 +87,7 @@ def herbereken_stats(seizoen, data):
         keeper = wedstrijd.get("keeper")
         saves = wedstrijd.get("saves", 0)
         if keeper in data[seizoen]["stats"]:
-        data[seizoen]["stats"][keeper]["saves"] += saves
+            data[seizoen]["stats"][keeper]["saves"] += saves
         data[seizoen]["team"]["goals"] += wedstrijd["goals"]
         data[seizoen]["team"]["tegen"] += wedstrijd["tegen"]
 
