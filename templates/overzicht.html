@@ -32,7 +32,7 @@ Tegen: {{ data.team.tegen }}
 
 <ol>
 {% for speler, stats in saves if stats.get("saves", 0) > 0 %}
-    <li>{{ speler }} - {{ stats["saves"] }}</li>
+    <li>{{ speler }} - {{ stats.get("saves", 0) }}</li>
 {% endfor %}
 </ol>  
     
