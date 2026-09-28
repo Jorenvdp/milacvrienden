@@ -268,6 +268,7 @@ def overzicht(seizoen):
     assists = sorted(data["stats"].items(), key=lambda x: x[1]["assists"], reverse=True)
     combo = sorted(data["stats"].items(),key=lambda x: x[1]["goals"] + x[1]["assists"],reverse=True)
     saves = sorted(data["stats"].items(),key=lambda x: x[1].get("saves", 0),reverse=True)
+    totaal_saves = sum(speler.get("saves", 0)for speler in data["stats"].values())
 
     return render_template(
         "overzicht.html",
@@ -276,6 +277,7 @@ def overzicht(seizoen):
         goals=goals,
         assists=assists,
         combo=combo,saves=saves
+        totaal_saves=totaal_saves
     )
 
 if __name__ == "__main__":
