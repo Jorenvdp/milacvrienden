@@ -28,6 +28,13 @@ Tegen: {{ data.team.tegen }}
 ({{ d.goals }}G + {{ d.assists }}A)<br>
 {% endfor %}
 
+<h3>🥅 Saves</h3>
+<ol>
+{% for speler, stats in saves %}
+    <li>{{ speler }} - {{ stats["saves"] }}</li>
+{% endfor %}
+</ol>    
+    
 <h3>🔒 Beheer</h3>
 
 <a href="{{ url_for('wedstrijd', seizoen=seizoen) }}">
