@@ -319,7 +319,7 @@
                 "saves": 0
             },
             "Joren": {
-                "goals": 0,
+                "goals": 1,
                 "assists": 0,
                 "saves": 0
             },
@@ -330,7 +330,7 @@
             },
             "Jelle": {
                 "goals": 1,
-                "assists": 0,
+                "assists": 1,
                 "saves": 0
             },
             "Mathias": {
@@ -361,7 +361,7 @@
             "Kwinten": {
                 "goals": 0,
                 "assists": 0,
-                "saves": 7
+                "saves": 11
             },
             "Lieven": {
                 "goals": 0,
@@ -385,8 +385,8 @@
             }
         },
         "team": {
-            "goals": 2,
-            "tegen": 7,
+            "goals": 3,
+            "tegen": 10,
             "keeper": "Kwinten",
             "saves": 7
         },
@@ -404,6 +404,18 @@
                     {
                         "maker": "Jelle",
                         "assist": "Ruben"
+                    }
+                ]
+            },
+            "Huibout": {
+                "goals": 1,
+                "tegen": 3,
+                "keeper": "Kwinten",
+                "saves": 4,
+                "doelpunten": [
+                    {
+                        "maker": "Joren",
+                        "assist": "Jelle"
                     }
                 ]
             }
