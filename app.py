@@ -263,6 +263,8 @@ def wedstrijden_lijst(seizoen):
 @app.route("/overzicht/<seizoen>")
 def overzicht(seizoen):
     data = laad_data()[seizoen]
+    print("TEAM DATA =", data["team"])
+    print("WEDSTRIJDEN =", list(data["wedstrijden"].keys()))
 
     goals = sorted(data["stats"].items(), key=lambda x: x[1]["goals"], reverse=True)
     assists = sorted(data["stats"].items(), key=lambda x: x[1]["assists"], reverse=True)
