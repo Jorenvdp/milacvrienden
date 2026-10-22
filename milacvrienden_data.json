@@ -315,12 +315,12 @@
         "stats": {
             "Sylvio": {
                 "goals": 0,
-                "assists": 0,
+                "assists": 1,
                 "saves": 0
             },
             "Joren": {
-                "goals": 1,
-                "assists": 0,
+                "goals": 2,
+                "assists": 1,
                 "saves": 0
             },
             "Jonas": {
@@ -334,17 +334,17 @@
                 "saves": 0
             },
             "Mathias": {
-                "goals": 0,
-                "assists": 1,
+                "goals": 1,
+                "assists": 2,
                 "saves": 0
             },
             "Ruben": {
                 "goals": 0,
                 "assists": 1,
-                "saves": 0
+                "saves": 2
             },
             "Tim": {
-                "goals": 0,
+                "goals": 1,
                 "assists": 0,
                 "saves": 0
             },
@@ -385,8 +385,8 @@
             }
         },
         "team": {
-            "goals": 3,
-            "tegen": 10,
+            "goals": 6,
+            "tegen": 14,
             "keeper": "Kwinten",
             "saves": 7
         },
@@ -416,6 +416,26 @@
                     {
                         "maker": "Joren",
                         "assist": "Jelle"
+                    }
+                ]
+            },
+            "2Goals1Cup": {
+                "goals": 3,
+                "tegen": 4,
+                "keeper": "Ruben",
+                "saves": 2,
+                "doelpunten": [
+                    {
+                        "maker": "Mathias",
+                        "assist": "Joren"
+                    },
+                    {
+                        "maker": "Tim",
+                        "assist": "Mathias"
+                    },
+                    {
+                        "maker": "Joren",
+                        "assist": "Sylvio"
                     }
                 ]
             }
