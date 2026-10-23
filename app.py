@@ -67,7 +67,27 @@ def push_json_to_github():
 def laad_data():
     if os.path.exists(DATA_FILE):
         with open(DATA_FILE, "r", encoding="utf-8") as f:
-            return json.load(f)
+            data = json.load(f)
+
+        print("DATAFILE =", DATA_FILE)
+
+        if "2026-2027" in data:
+            print(
+                "LAAD_DATA wedstrijden =",
+                list(
+                    data["2026-2027"]
+                    .get("wedstrijden", {})
+                    .keys()
+                )
+            )
+
+            print(
+                "LAAD_DATA team =",
+                data["2026-2027"].get("team", {})
+            )
+
+        return data
+
     return {}
 
 def bewaar_data(data):
