@@ -71,12 +71,23 @@ def laad_data():
 
     url = f"https://raw.githubusercontent.com/{repo}/{branch}/milacvrienden_data.json"
 
+    print("DOWNLOAD JSON FROM:", url)
+
     r = requests.get(url)
 
-    if r.status_code == 200:
-        return r.json()
+    print("GITHUB STATUS:", r.status_code)
 
-    print("GitHub download mislukt:", r.status_code)
+    if r.status_code == 200:
+        data = r.json()
+
+        print("GITHUB wedstrijden =",
+              list(data.get("2026-2027", {})
+                       .get("wedstrijden", {})
+                       .keys()))
+
+        return data
+
+    print("GitHub download mislukt")
     return {}
 
 def bewaar_data(data):
