@@ -65,29 +65,18 @@ def push_json_to_github():
     print("✅ GitHub response:", response.status_code, response.text)
 
 def laad_data():
-    if os.path.exists(DATA_FILE):
-        with open(DATA_FILE, "r", encoding="utf-8") as f:
-            data = json.load(f)
 
-        print("DATAFILE =", DATA_FILE)
+    repo = os.environ.get("GITHUB_REPO")
+    branch = os.environ.get("GITHUB_BRANCH", "main")
 
-        if "2026-2027" in data:
-            print(
-                "LAAD_DATA wedstrijden =",
-                list(
-                    data["2026-2027"]
-                    .get("wedstrijden", {})
-                    .keys()
-                )
-            )
+    url = f"https://raw.githubusercontent.com/{repo}/{branch}/milacvrienden_data.json"
 
-            print(
-                "LAAD_DATA team =",
-                data["2026-2027"].get("team", {})
-            )
+    r = requests.get(url)
 
-        return data
+    if r.status_code == 200:
+        return r.json()
 
+    print("GitHub download mislukt:", r.status_code)
     return {}
 
 def bewaar_data(data):
