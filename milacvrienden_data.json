@@ -319,7 +319,7 @@
                 "saves": 0
             },
             "Joren": {
-                "goals": 2,
+                "goals": 5,
                 "assists": 1,
                 "saves": 0
             },
@@ -330,7 +330,7 @@
             },
             "Jelle": {
                 "goals": 1,
-                "assists": 1,
+                "assists": 4,
                 "saves": 0
             },
             "Mathias": {
@@ -361,7 +361,7 @@
             "Kwinten": {
                 "goals": 0,
                 "assists": 0,
-                "saves": 11
+                "saves": 15
             },
             "Lieven": {
                 "goals": 0,
@@ -385,8 +385,8 @@
             }
         },
         "team": {
-            "goals": 6,
-            "tegen": 14,
+            "goals": 9,
+            "tegen": 17,
             "keeper": "Kwinten",
             "saves": 7
         },
@@ -436,6 +436,26 @@
                     {
                         "maker": "Joren",
                         "assist": "Sylvio"
+                    }
+                ]
+            },
+            "Den Bels": {
+                "goals": 3,
+                "tegen": 3,
+                "keeper": "Kwinten",
+                "saves": 4,
+                "doelpunten": [
+                    {
+                        "maker": "Joren",
+                        "assist": "Jelle"
+                    },
+                    {
+                        "maker": "Joren",
+                        "assist": "Jelle"
+                    },
+                    {
+                        "maker": "Joren",
+                        "assist": "Jelle"
                     }
                 ]
             }
