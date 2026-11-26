@@ -345,7 +345,7 @@
             },
             "Tim": {
                 "goals": 1,
-                "assists": 0,
+                "assists": 2,
                 "saves": 0
             },
             "Koen": {
@@ -354,14 +354,14 @@
                 "saves": 0
             },
             "Yannick": {
-                "goals": 1,
+                "goals": 3,
                 "assists": 0,
                 "saves": 0
             },
             "Kwinten": {
                 "goals": 0,
                 "assists": 0,
-                "saves": 15
+                "saves": 17
             },
             "Lieven": {
                 "goals": 0,
@@ -385,7 +385,7 @@
             }
         },
         "team": {
-            "goals": 9,
+            "goals": 11,
             "tegen": 17,
             "keeper": "Kwinten",
             "saves": 7
@@ -456,6 +456,22 @@
                     {
                         "maker": "Joren",
                         "assist": "Jelle"
+                    }
+                ]
+            },
+            "Boostboys": {
+                "goals": 2,
+                "tegen": 0,
+                "keeper": "Kwinten",
+                "saves": 2,
+                "doelpunten": [
+                    {
+                        "maker": "Yannick",
+                        "assist": "Tim"
+                    },
+                    {
+                        "maker": "Yannick",
+                        "assist": "Tim"
                     }
                 ]
             }
